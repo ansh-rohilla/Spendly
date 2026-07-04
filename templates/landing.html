@@ -20,7 +20,7 @@
         </p>
         <div class="hero-actions">
             <a href="{{ url_for('register') }}" class="btn-primary">Create free account</a>
-            <a href="{{ url_for('login') }}" class="btn-primary">See how it works</a>
+            <a href="#" class="btn-primary" data-modal-open="video-modal">See how it works</a>
         </div>
     </div>
 
@@ -101,5 +101,27 @@
         <a href="{{ url_for('register') }}" class="btn-primary">Create free account</a>
     </div>
 </section>
+
+<div id="video-modal" class="modal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="video-modal-title">
+    <div class="modal-overlay" data-modal-close></div>
+    <div class="modal-dialog" role="document">
+        <button type="button" class="modal-close" data-modal-close aria-label="Close video">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <h2 id="video-modal-title" class="modal-title">See how Spendly works</h2>
+        <div class="modal-video-frame">
+            <iframe
+                id="video-modal-iframe"
+                class="modal-video"
+                src=""
+                data-src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1&enablejsapi=1"
+                title="Spendly product walkthrough"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+            ></iframe>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
